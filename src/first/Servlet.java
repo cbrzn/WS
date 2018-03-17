@@ -27,7 +27,7 @@ public class Servlet extends HttpServlet {
     		WSInterface server = service.getPort(WSInterface.class);
     		response.setCharacterEncoding("UTF-8");
     		response.setContentType("text/event-stream");
-    		if (server.check() == true) {
+    		if (server.check()) {
 	    		response.getWriter().write("event:TEST \n\n");
 	    		response.getWriter().write(server.show());
 	    		response.getWriter().flush();

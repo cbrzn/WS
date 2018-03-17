@@ -6,10 +6,9 @@ import javax.jws.WebService;
 public interface WSInterface {
 
 	void add(String string);
-	
-	void erase(int number);
-	
+		
 	String show();
 	
 	boolean check();
+	
 }

@@ -12,10 +12,6 @@ public class WSImplementation implements WSInterface {
 		arr.add(string);
 	}
 	
-	public void erase(int number) {
-		arr.remove(number);
-	}
-	
 	public String show() {
 		return "data: " + arr.remove(0) + "\n\n";
 	}

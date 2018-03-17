@@ -16,10 +16,10 @@ public class Main {
 	public static void main(String[] args) throws LifecycleException, ServletException {
 		
 		Integer port = 8200;
+		String webService = "http://localhost:8520/test";
 		Tomcat tomcat = new Tomcat();
 		tomcat.setPort(port);
-		Endpoint.publish("http://localhost:8520/test", ws);
-		System.out.println("Tomcat levantara en el puerto: " + port);
+		Endpoint.publish(webService, ws);
 		Context ctxt = tomcat.addContext("/", new File(".").getAbsolutePath());
 		tomcat.addWebapp("/App", new File(".").getAbsolutePath() + "/WebContent");
 		Tomcat.addServlet(ctxt, "Servlet", new Servlet());
